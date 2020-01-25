@@ -16,7 +16,7 @@ module.exports = function middlewareFactory(router) {
 };
 
 function notFound(req, res) {
-  return res.send(404).end();
+  return res.status(404).end();
 }
 
 function serverError(req, res) {
