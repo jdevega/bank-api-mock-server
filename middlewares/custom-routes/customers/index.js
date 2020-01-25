@@ -1,5 +1,6 @@
 const findCustomerByUuid = require('./findCustomerByUuid')
 const constants = require('./constants')
+const accountsFactory = require('../accounts')
 const faker = require('faker')
 
 module.exports = function(db) {
@@ -25,7 +26,7 @@ function createSavingsAccountHandler (db, req, res) {
   const account = {
     ID: IDAccount,
     IBAN: faker.finance.iban(),
-    OverallBalance: +req.body.Amount,
+    OverallBalance: 0,
     ProductType: constants.SAVINGS_ACCOUNT,
     Currency: '€'
   }
@@ -47,9 +48,11 @@ function createSavingsAccountHandler (db, req, res) {
     Description: 'Opening a new savings account'
   }
 
+  
   db().accounts.push(account)
   db().customerAccount.push(customerAccount)
   db().transactions.push(transaction)
+  accountsFactory(db).updateAccountsBalance(transaction)
   return res.status(200).jsonp(account)
 }
 

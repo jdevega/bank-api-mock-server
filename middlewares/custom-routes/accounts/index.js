@@ -4,7 +4,8 @@ const faker = require("faker");
 module.exports = function(db) {
   return {
     accountRequestHandler: accountRequestHandler.bind(null, db),
-    createTransferHandler: accountTransferHandler.bind(null, db)
+    createTransferHandler: accountTransferHandler.bind(null, db),
+    updateAccountsBalance: updateAccountsBalance.bind(null, db)
   };
 };
 
@@ -49,10 +50,6 @@ function findAccountById(db, id) {
 
 function accountTransferHandler(db, req, res) {
   const date = Date.now();
-  console.log({
-    body: req.body,
-    params: req.params
-  });
   const transaction = {
     IDTransaction: faker.random.uuid(),
     OrderedBy: req.body.OrderedBy,
@@ -63,7 +60,17 @@ function accountTransferHandler(db, req, res) {
     OrderDate: date,
     Description: req.body.Description
   };
-  console.log(transaction)
+  updateAccountsBalance(db, transaction);
   db().transactions.push(transaction);
   res.status(200).jsonp(transaction);
+}
+
+function updateAccountsBalance(db, transaction) {
+  console.log({transaction})
+  var originAccount = db().accounts.find(account => account.ID === transaction.IDOriginAccount);
+  var destinationAccount = db().accounts.find(account => account.ID === transaction.IDDestinationAccount);
+  console.log({originAccount, destinationAccount})
+  originAccount.OverallBalance -= transaction.Amount;
+  destinationAccount.OverallBalance += transaction.Amount;
+  console.log({originAccount, destinationAccount})
 }

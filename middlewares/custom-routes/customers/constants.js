@@ -1,3 +1,3 @@
 module.exports = {
-  SAVINGS_ACCOUNT:'Savings',
+  SAVINGS_ACCOUNT: 'Savings'
 }
