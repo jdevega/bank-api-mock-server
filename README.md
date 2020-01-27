@@ -10,7 +10,7 @@ How to get it up and running:
 git clone <repo-url> hcl-mock-server
 cd hcl-mock-server
 npm install
-npm start
+npm run dev
 ```
 Go to http://localhost:3000 
 
