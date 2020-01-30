@@ -8,13 +8,14 @@ const customMiddlewares = customRoutesMiddleware(router)
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares)
 
+server.use(jsonServer.bodyParser)
 server.use((req, res, next) => {
   console.log({
     path: req.path,
+    body: req.body
   })
   next()
 })
-server.use(jsonServer.bodyParser)
 server.get('/customers/:uuid', customMiddlewares.customer)
 server.post('/customers/:uuid/savings', customMiddlewares.createSavingsAccount)
 server.get('/accounts', customMiddlewares.serverError)

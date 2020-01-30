@@ -1,4 +1,5 @@
 const findCustomerByUuid = require('./findCustomerByUuid')
+const findCustomerAccounts = require('./findCustomerAccounts')
 const constants = require('./constants')
 const accountsFactory = require('../accounts')
 const faker = require('faker')
@@ -28,7 +29,8 @@ function createSavingsAccountHandler (db, req, res) {
     IBAN: faker.finance.iban(),
     OverallBalance: 0,
     ProductType: constants.SAVINGS_ACCOUNT,
-    Currency: '€'
+    Currency: '€',
+    Alias: "New account"
   }
 
   const customerAccount = {
@@ -37,6 +39,7 @@ function createSavingsAccountHandler (db, req, res) {
     HolderType: "Account Holder"
   }
 
+  console.log(req.body)
   const transaction = {
     TransactionID: faker.random.uuid(),
     OrderedBy: req.params.uuid,
@@ -53,7 +56,8 @@ function createSavingsAccountHandler (db, req, res) {
   db().customerAccount.push(customerAccount)
   db().transactions.push(transaction)
   accountsFactory(db).updateAccountsBalance(transaction)
-  return res.status(200).jsonp(account)
+  const accounts = findCustomerAccounts(db, req.params.uuid)
+  return res.status(200).jsonp(accounts)
 }
 
 function nextID(db, table) {

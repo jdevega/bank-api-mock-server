@@ -13,7 +13,7 @@ module.exports = function(db, uuid) {
     .map(account => {
       const ca = customerAccounts.find(ca => ca.IDAccount === account.ID)
       return Object.assign({}, account, {
-        HolderType: ca.HolderType, 
+        HolderType: ca.HolderType,
         Transactional: IsTransactional(account)
       })
     })

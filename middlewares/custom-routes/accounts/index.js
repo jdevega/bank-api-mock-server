@@ -68,6 +68,6 @@ function accountTransferHandler(db, req, res) {
 function updateAccountsBalance(db, transaction) {
   var originAccount = db().accounts.find(account => account.ID === transaction.IDOriginAccount);
   var destinationAccount = db().accounts.find(account => account.ID === transaction.IDDestinationAccount);
-  originAccount.OverallBalance -= transaction.Amount;
-  destinationAccount.OverallBalance += transaction.Amount;
+  originAccount && (originAccount.OverallBalance -= transaction.Amount);
+  destinationAccount && (destinationAccount.OverallBalance += transaction.Amount);
 }

@@ -1,21 +1,22 @@
 {
   "customers": [
-    {"ID": 1, "UUID": "7170cff1-6b02-4b52-9b67-c5db5f7449dd", "Name": "Julia", "Surname": "Graham", "Address": "3267 Kathleen Coves", "Email": "Julia87@hotmail.com"},
-    {"ID": 2, "UUID": "638980b8-5aa9-4c83-a599-316b771d25dd", "Name": "Ana Luisa", "Surname": "Carreón", "Address": "Vía Valdivia, 23", "Email": "ana.luisa@gmail.com"},
-    {"ID": 3, "UUID": "f8b57d20-5036-4368-90a2-029b3168e4a1", "Name": "José Eduardo", "Surname": "Matos", "Address": "C/ Puente de Mares, 3", "Email": "JosEduardo.Matos@gmail.com"},
-    {"ID": 4, "UUID": "98a3e54e-9801-40e7-af66-3242de1d2bec", "Name": "Krishnadas", "Surname": "Dwivedi", "Address": "6195 Arora Oval", "Email": "Krishnadas47@yahoo.co.in"}
+    {"ID": 1, "UUID": "7170cff1-6b02-4b52-9b67-c5db5f7449dd", "Name": "Julia", "Surname": "Graham", "Address": "3267 Kathleen Coves", "Email": "Julia87@hotmail.com", "Avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/idiot/128.jpg"},
+    {"ID": 2, "UUID": "638980b8-5aa9-4c83-a599-316b771d25dd", "Name": "Ana Luisa", "Surname": "Carreón", "Address": "Vía Valdivia, 23", "Email": "ana.luisa@gmail.com", "Avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/lanceguyatt/128.jpg"},
+    {"ID": 3, "UUID": "f8b57d20-5036-4368-90a2-029b3168e4a1", "Name": "José Eduardo", "Surname": "Matos", "Address": "C/ Puente de Mares, 3", "Email": "JosEduardo.Matos@gmail.com", "Avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/alsobrooks/128.jpg"},
+    {"ID": 4, "UUID": "98a3e54e-9801-40e7-af66-3242de1d2bec", "Name": "Krishnadas", "Surname": "Dwivedi", "Address": "6195 Arora Oval", "Email": "Krishnadas47@yahoo.co.in", "Avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/keyuri85/128.jpg"},
+    {"ID": 5, "UUID": "9cda862e-e79f-42ed-a800-b4f1583a0135", "Name": "Florine", "Surname": "Gorczany", "Address": "87910 Jaunita Extension", "Email": "Florine3@gmail.com", "Avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/souuf/128.jpg"}
   ],
   "accounts": [
-    {"ID": 1, "IBAN": "ES3920387289627598671424", "OverallBalance": 100.23, "ProductType": "Payroll", "Currency": "€"},
-    {"ID": 2, "IBAN": "ES8004871131384452525613", "OverallBalance": 10.32, "ProductType": "Savings", "Currency": "€"},
-    {"ID": 3, "IBAN": "NL85INGB4665815860", "OverallBalance": 1212.48, "ProductType": "Payments", "Currency": "€"},
-    {"ID": 4, "IBAN": "NL79RABO8430666915", "OverallBalance": 30.96, "ProductType": "Payroll", "Currency": "€"},
-    {"ID": 5, "IBAN": "FR5814508000707749352711P46", "OverallBalance": 750.83, "ProductType": "Payroll", "Currency": "€"},
-    {"ID": 6, "IBAN": "ES8730049684819827893755", "OverallBalance": 5632.01, "ProductType": "Payroll", "Currency": "€"},
-    {"ID": 7, "IBAN": "NL66RABO9942408754", "OverallBalance": 4102.00, "ProductType": "Savings", "Currency": "€"},
-    {"ID": 8, "IBAN": "GB78BARC20040127835841", "OverallBalance": 123.32, "ProductType": "Savings", "Currency": "€"},
-    {"ID": 9, "IBAN": "FR0314508000701888216182I24", "OverallBalance": 783.96, "ProductType": "Payments", "Currency": "€"},
-    {"ID": 10, "IBAN": "GB15BARC20038451492481", "OverallBalance": 1027.12, "ProductType": "Payments", "Currency": "€"}
+    {"ID": 1, "Alias": "My Account 1", "IBAN": "ES3920387289627598671424", "OverallBalance": 100.23, "ProductType": "Payroll", "Currency": "€"},
+    {"ID": 2, "Alias": "My Account 2", "IBAN": "ES8004871131384452525613", "OverallBalance": 10.32, "ProductType": "Savings", "Currency": "€"},
+    {"ID": 3, "Alias": "My Account 3", "IBAN": "NL85INGB4665815860", "OverallBalance": 1212.48, "ProductType": "Payments", "Currency": "€"},
+    {"ID": 4, "Alias": "My Account 4", "IBAN": "NL79RABO8430666915", "OverallBalance": 30.96, "ProductType": "Payroll", "Currency": "€"},
+    {"ID": 5, "Alias": "My Account 5", "IBAN": "FR5814508000707749352711P46", "OverallBalance": 750.83, "ProductType": "Payroll", "Currency": "€"},
+    {"ID": 6, "Alias": "My Account 6", "IBAN": "ES8730049684819827893755", "OverallBalance": 5632.01, "ProductType": "Payroll", "Currency": "€"},
+    {"ID": 7, "Alias": "My Account 7", "IBAN": "NL66RABO9942408754", "OverallBalance": 4102.00, "ProductType": "Savings", "Currency": "€"},
+    {"ID": 8, "Alias": "My Account 8", "IBAN": "GB78BARC20040127835841", "OverallBalance": 123.32, "ProductType": "Savings", "Currency": "€"},
+    {"ID": 9, "Alias": "My Account 9", "IBAN": "FR0314508000701888216182I24", "OverallBalance": 783.96, "ProductType": "Payments", "Currency": "€"},
+    {"ID": 10, "Alias": "My Account 10", "IBAN": "GB15BARC20038451492481", "OverallBalance": 1027.12, "ProductType": "Payments", "Currency": "€"}
   ],
   "customerAccount":[
     {"UUIDCustomer": "7170cff1-6b02-4b52-9b67-c5db5f7449dd", "IDAccount": 1, "HolderType": "Account Holder"},
@@ -28,7 +29,7 @@
     {"UUIDCustomer": "98a3e54e-9801-40e7-af66-3242de1d2bec", "IDAccount": 6, "HolderType": "Account Holder"},
     {"UUIDCustomer": "98a3e54e-9801-40e7-af66-3242de1d2bec", "IDAccount": 7, "HolderType": "Account Holder"},
     {"UUIDCustomer": "98a3e54e-9801-40e7-af66-3242de1d2bec", "IDAccount": 8, "HolderType": "Account Holder"},
-    {"UUIDCustomer": "98a3e54e-9801-40e7-af66-3242de1d2bec", "IDAccount": 9, "HolderType": "Account Holder"},
+    {"UUIDCustomer": "9cda862e-e79f-42ed-a800-b4f1583a0135", "IDAccount": 9, "HolderType": "Account Holder"},
     {"UUIDCustomer": "98a3e54e-9801-40e7-af66-3242de1d2bec", "IDAccount": 10, "HolderType": "Account Holder"}
   ],
   "transactions": [
